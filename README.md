@@ -1,1 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>董柯的作品集</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏 */
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem;
+        }
+        #navbar li {
+            margin: 0 1rem;
+        }
+        #navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        #navbar a:hover {
+            color: #0077b6;
+        }
 
+        /* 主页Banner */
+        .banner {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            text-align: center;
+        }
+        .banner-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .banner-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #0077b6;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #023e8a;
+        }
+
+        /* 作品集展示 */
+        .section {
+            padding: 5rem 2rem;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card h3 {
+            padding: 1rem;
+        }
+        .project-card p {
+            padding: 0 1rem 1rem;
+            color: #666;
+        }
+
+        /* 关于我 */
+        .skills {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .skill {
+            margin-bottom: 1.5rem;
+        }
+        .skill-bar {
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        .skill-level {
+            height: 100%;
+            background: #0077b6;
+            border-radius: 5px;
+        }
+
+        /* 联系方式 */
+        #contact {
+            background: #f5f7fa;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .submit-btn {
+            background: #0077b6;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #023e8a;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#projects">作品</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#contact">联系</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主页Banner -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>我是董柯</h1>
+            <p>UI/UX设计师 & 前端开发者</p>
+            <a href="#projects" class="btn">查看我的作品</a>
+        </div>
+    </section>
+
+    <!-- 作品集展示 -->
+    <section id="projects" class="section">
+        <h2>我的作品</h2>
+        <div class="projects-grid">
+            <!-- 作品1 -->
+            <div class="project-card">
+                <img src="images/tea.jpg" alt="茶文化网站设计">
+                <h3>茶文化网站设计</h3>
+                <p>中国传统茶文化的响应式网站设计</p>
+            </div>
+            <!-- 作品2 -->
+            <div class="project-card">
+                <img src="images/tea.jpg" alt="移动应用">
+                <h3>健康管理App</h3>
+                <p>React Native开发的跨平台应用</p>
+            </div>
+            <!-- 作品3 -->
+            <div class="project-card">
+                <img src="images/tea.jpg" alt="品牌设计">
+                <h3>品牌视觉系统</h3>
+                <p>为科技公司设计的品牌标识与VI手册</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <h2>关于我</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>UI/UX设计</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>前端开发</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Figma</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 95%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section">
+        <h2>联系我</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">留言</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">发送消息</button>
+        </form>
+    </section>
+</body>
+</html>
