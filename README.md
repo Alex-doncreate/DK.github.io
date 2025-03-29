@@ -204,7 +204,7 @@
         <div class="projects-grid">
             <!-- 作品1 -->
             <div class="project-card">
-                <img src="images/tea.jpg" alt="茶文化网站设计">
+                <img src="Works\images/tea.jpg" alt="茶文化网站设计">
                 <h3>茶文化网站设计</h3>
                 <p>中国传统茶文化的响应式网站设计</p>
             </div>
